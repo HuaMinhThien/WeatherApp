@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/style.css">
   
   <title>Frontend Mentor | Weather app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,51 +15,61 @@
 </head>
 <body>
 
-  Units
+  <header>
+    <img src="assets/images/logo.svg" alt="">
 
-  Switch to Imperial/Metric
+    <div id="units">
+      <img src="assets/images/icon-units.svg" alt="">
+      <p>Units</p>
+      <img src="assets/images/icon-dropdown.svg" alt="">
+    </div>
+  </header>
 
-  Temperature
+  <main>
+    <h1 id="title">How's the sky looking today?</h1>
 
-  Celsius (°C)
-  Fahrenheit (°F)
+    <section class="sec-search">
+      <div class="search">
+        <img src="assets/images/icon-search.svg" alt="">
+        <input id="search" type="text" placeholder="Search for a place...">
+      </div>
 
-  Wind Speed
+      <button id="btn-search">
+        Search 
+      </button>
+    </section>
+    
+    <section class="sec1-today-Weather">
+      <div class="sec1-main-box">
 
-  km/h
-  mph
+        <div class="sec1-m-left">
+          <h3>Berlin, Germany</h3>
+          <p>Tuesday, Aug 5, 2026</p>
+        </div>
+        <div class="sec1-m-right">
+          <img src="assets/images/icon-rain.webp" alt="">
+          <p>20</p>
+        </div>
+        
+      </div>
+      
+    </section>
+  </main>
 
-  Precipitation
 
-  Millimeters (mm)
-  Inches (in)
 
-  How's the sky looking today?
 
-  Search for a city, e.g., New York
-  Search
 
-  Feels like
-  <!-- Insert temperature here -->
 
-  Humidity
-  <!-- Insert humidity here -->
 
-  Wind
-  <!-- Insert wind here -->   
-  
-  Precipitation
-  <!-- Insert precipitation here -->
-
-  Daily forecast
-  <!-- Insert daily forecast for the next 7 days here -->
-
-  Hourly forecast
-  <!-- Insert hourly forecast for the selected day here -->
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/HuaMinhThien/FrontendMentor-WeatherApp">Hứa Minh Thiện</a>.
   </div>
+
+  <script type="module" src="dist/main.js">
+    
+  </script>
 </body>
 </html>

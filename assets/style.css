@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background-color: hsl(243, 96%, 9%);
+    color: #fff;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    justify-self: center;
+    margin-top: 20px;
+    width: 1300px;
+    position: relative;
+    background-color: hsl(243, 96%, 9%);
+}
+header>img{
+    height: 35px;
+}
+
+#units{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: hsl(243, 27%, 20%);
+    height: 25px;
+}
+
+#units img{
+    height: 15px;
+}
+
+
+main{
+    width: 1300px;
+    justify-self: center;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr, 1fr, 1fr);
+}
+
+#title{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    font-size: 55px;
+    justify-self: center;
+}
+
+.sec-search{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search{
+    background-color: hsl(243, 27%, 20%);
+    width: 450px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.search:focus-within {
+    border-color: #fff; 
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); 
+}
+.search>input{
+    width: 400px;
+    height: 100%;
+    background-color: transparent;
+    color: #fff;
+    border: none;    
+    outline: none;
+}
+.search>input:focus{
+    border: none;
+}
+
+.search>img{
+    height: 20px;
+}
+
+#btn-search{
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: hsl(233, 67%, 56%);
+    cursor: pointer;
+}
+
+#btn-search:hover{
+    background-color: hsl(248, 70%, 36%);
+}
+
+.sec1-today-Weather{
+    margin-top: 50px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+
+.sec1-main-box {
+    background-image: url('images/bg-today-large.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%; 
+    height: 250px;
+    border-radius: 12px; 
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+}
