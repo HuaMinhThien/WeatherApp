@@ -45,7 +45,6 @@ main{
     justify-self: center;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr, 1fr, 1fr);
 }
 
 #title{
@@ -66,7 +65,7 @@ main{
 }
 
 .search{
-    background-color: hsl(243, 27%, 20%);
+    background-color: hsl(243, 23%, 24%);
     width: 450px;
     height: 40px;
     border-radius: 5px;
@@ -80,7 +79,7 @@ main{
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); 
 }
 .search>input{
-    width: 400px;
+    width: 450px;
     height: 100%;
     background-color: transparent;
     color: #fff;
@@ -109,6 +108,7 @@ main{
 }
 
 .sec1-today-Weather{
+    width: 840px;
     margin-top: 50px;
     grid-column: 1/2;
     grid-row: 3/4;
@@ -131,3 +131,190 @@ main{
     padding: 20px;
     box-sizing: border-box;
 }
+
+.sec1-m-left{
+    margin: auto 0;
+    
+}
+.sec1-m-left>h3{
+    font-weight: 600;
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.sec1-m-left>p{
+    font-size: 20px;
+}
+.sec1-m-right{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    font-size: 80px;
+    font-weight: 600;
+    margin: auto 0;
+}
+
+.sec1-m-right img{
+    height: 100px;
+}
+
+.sec1-parameter{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.sec1-param-box{
+    width: 190px;
+    height: 100px;
+    background-color: hsl(243, 23%, 24%);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.title-param{
+    font-size: 18px;
+    margin-left: 20px;
+
+}
+.current-param{
+    font-size: 26px;
+    margin-left: 20px;
+}
+
+.sec2-daily-forecast{
+    width: 840px;
+    margin-top: 50px;
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.sec2-daily-forecast > h3{
+    font-size: 20px;
+}
+
+.sec2-daily{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+.sec2-daily-box>img{
+    width: 70px;
+}
+.sec2-daily-box{
+    background-color: hsl(243, 23%, 24%);
+    border-radius: 10px;
+    width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 16px;
+}
+
+.sec2-daily-box-temperature{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sec3-hourly-forecast{
+    background-color: hsl(243, 23%, 24%);
+    grid-column: 2/3;
+    grid-row: 3/5;
+    margin-top: 50px;
+    width: 420px;
+    border-radius: 10px;
+}
+
+.sec3-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.select-day {
+    width: 80px;
+    border-radius: 10px;
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: hsl(243, 23%, 34%);
+    color: white;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sec3-select-day {
+    width: 140px;
+    
+    position: absolute;
+    overflow: hidden;
+    max-height: 0; 
+    transition: max-height 0.3s ease-in-out;
+    background-color: hsl(243, 27%, 20%);
+    margin: 10px 0 0 0;
+    padding: 10px;
+    list-style: none;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+  
+}
+
+
+.drop-day[open] .sec3-select-day {
+  max-height: 400px;
+}
+
+.day{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.day:hover{
+    background-color: hsl(243, 23%, 30%);
+    cursor: pointer;
+}
+
+.sec3-hourly{
+    margin: 0 auto;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sec3-hourly-box{
+    background-color: hsl(243, 23%, 29%);
+    border-radius: 5px;
+    height: 46px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sec3-hourly-box>div{
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    align-items: center;
+}
+.sec3-hourly-box>div>img{
+    height: 40px;
+}
+

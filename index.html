@@ -1,75 +1,249 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="assets/style.css">
-  
-  <title>Frontend Mentor | Weather app</title>
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
 
-  <header>
-    <img src="assets/images/logo.svg" alt="">
+    <title>Frontend Mentor | Weather app</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="assets/images/logo.svg" alt="" />
 
-    <div id="units">
-      <img src="assets/images/icon-units.svg" alt="">
-      <p>Units</p>
-      <img src="assets/images/icon-dropdown.svg" alt="">
+      <div id="units">
+        <img src="assets/images/icon-units.svg" alt="" />
+        <p>Units</p>
+        <img src="assets/images/icon-dropdown.svg" alt="" />
+      </div>
+    </header>
+
+    <main>
+      <h1 id="title">How's the sky looking today?</h1>
+
+      <section class="sec-search">
+        <div class="search">
+          <img src="assets/images/icon-search.svg" alt="" />
+          <input id="search" type="text" placeholder="Search for a place..." />
+        </div>
+
+        <button id="btn-search">Search</button>
+      </section>
+
+      <section class="sec1-today-Weather">
+        <div class="sec1-main-box">
+          <div class="sec1-m-left">
+            <h3>Berlin, Germany</h3>
+            <p>Tuesday, Aug 5, 2026</p>
+          </div>
+          <div class="sec1-m-right">
+            <img src="assets/images/icon-rain.webp" alt="" />
+            <p>20°</p>
+          </div>
+        </div>
+
+        <div class="sec1-parameter">
+          <div class="sec1-param-box" id="feelsLike">
+            <p class="title-param">Feels Like</p>
+            <p class="current-param">18°</p>
+          </div>
+          <div class="sec1-param-box" id="humidty">
+            <p class="title-param">Humidty</p>
+            <p class="current-param">46%</p>
+          </div>
+          <div class="sec1-param-box" id="wind">
+            <p class="title-param">Wind</p>
+            <p class="current-param">14 km/h</p>
+          </div>
+          <div class="sec1-param-box" id="precipitation">
+            <p class="title-param">Precipitation</p>
+            <p class="current-param">0 mm</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec2-daily-forecast">
+        <h3>Daily forecast</h3>
+        <div class="sec2-daily">
+          <div class="sec2-daily-box">
+            <p>Tue</p>
+            <img src="assets/images/icon-rain.webp" alt="" />
+            <div class="sec2-daily-box-temperature">
+              <p>20°</p>
+              <p>14°</p>
+            </div>
+          </div>
+          <div class="sec2-daily-box">
+            <p>Wed</p>
+            <img src="assets/images/icon-overcast.webp" alt="" />
+            <div class="sec2-daily-box-temperature">
+              <p>21°</p>
+              <p>15°</p>
+            </div>
+          </div>
+          <div class="sec2-daily-box">
+            <p>Thu</p>
+            <img src="assets/images/icon-drizzle.webp" alt="" />
+            <div class="sec2-daily-box-temperature">
+              <p>19°</p>
+              <p>17°</p>
+            </div>
+          </div>
+          <div class="sec2-daily-box">
+            <p>Fri</p>
+            <img src="assets/images/icon-partly-cloudy.webp" alt="" />
+            <div class="sec2-daily-box-temperature">
+              <p>23°</p>
+              <p>18°</p>
+            </div>
+          </div>
+          <div class="sec2-daily-box">
+            <p>Sat</p>
+            <img src="assets/images/icon-snow.webp" alt="" />
+            <div class="sec2-daily-box-temperature">
+              <p>20°</p>
+              <p>14°</p>
+            </div>
+          </div>
+          <div class="sec2-daily-box">
+            <p>Sun</p>
+            <img src="assets/images/icon-storm.webp" />
+            <div class="sec2-daily-box-temperature">
+              <p>21°</p>
+              <p>18°</p>
+            </div>
+          </div>
+          <div class="sec2-daily-box">
+            <p>Mon</p>
+            <img src="assets/images/icon-sunny.webp" alt="" />
+            <div class="sec2-daily-box-temperature">
+              <p>18°</p>
+              <p>12°</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec3-hourly-forecast">
+        <div class="sec3-title">
+          <h3>Hourly forecast</h3>
+
+          <details class="drop-day">
+            <summary class="select-day">
+              Tuesday
+              <img
+                src="assets/images/icon-dropdown.svg"
+                alt=""
+                style="height: 10px"
+              />
+            </summary>
+            <ul class="sec3-select-day">
+              <li class="day">Monday</li>
+              <li class="day">Tuesday</li>
+              <li class="day">Wednesday</li>
+              <li class="day">Thursday</li>
+              <li class="day">Friday</li>
+              <li class="day">Saturday</li>
+              <li class="day">Sunday</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="sec3-hourly">
+          <div class="sec3-hourly-box">
+            <div>
+              <img src="assets/images/icon-rain.webp" alt="" />
+              <p>3 PM</p>
+            </div>
+
+            <p>20°</p>
+          </div>
+          <div class="sec3-hourly-box">
+            <div>
+              <img src="assets/images/icon-rain.webp" alt="" />
+              <p>4 PM</p>
+            </div>
+
+            <p>20°</p>
+          </div>
+          <div class="sec3-hourly-box">
+            <div>
+              <img src="assets/images/icon-rain.webp" alt="" />
+              <p>5 PM</p>
+            </div>
+
+            <p>20°</p>
+          </div>
+          <div class="sec3-hourly-box">
+            <div>
+              <img src="assets/images/icon-rain.webp" alt="" />
+              <p>6 PM</p>
+            </div>
+
+            <p>20°</p>
+          </div>
+          <div class="sec3-hourly-box">
+            <div>
+              <img src="assets/images/icon-rain.webp" alt="" />
+              <p>7 PM</p>
+            </div>
+
+            <p>20°</p>
+          </div>
+          <div class="sec3-hourly-box">
+            <div>
+              <img src="assets/images/icon-rain.webp" alt="" />
+              <p>8 PM</p>
+            </div>
+
+            <p>20°</p>
+          </div>
+          <div class="sec3-hourly-box">
+            <div>
+              <img src="assets/images/icon-rain.webp" alt="" />
+              <p>9 PM</p>
+            </div>
+
+            <p>20°</p>
+          </div>
+          <div class="sec3-hourly-box">
+            <div>
+              <img src="assets/images/icon-rain.webp" alt="" />
+              <p>10 PM</p>
+            </div>
+
+            <p>20°</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by
+      <a href="https://github.com/HuaMinhThien/FrontendMentor-WeatherApp"
+        >Hứa Minh Thiện</a
+      >.
     </div>
-  </header>
 
-  <main>
-    <h1 id="title">How's the sky looking today?</h1>
-
-    <section class="sec-search">
-      <div class="search">
-        <img src="assets/images/icon-search.svg" alt="">
-        <input id="search" type="text" placeholder="Search for a place...">
-      </div>
-
-      <button id="btn-search">
-        Search 
-      </button>
-    </section>
-    
-    <section class="sec1-today-Weather">
-      <div class="sec1-main-box">
-
-        <div class="sec1-m-left">
-          <h3>Berlin, Germany</h3>
-          <p>Tuesday, Aug 5, 2026</p>
-        </div>
-        <div class="sec1-m-right">
-          <img src="assets/images/icon-rain.webp" alt="">
-          <p>20</p>
-        </div>
-        
-      </div>
-      
-    </section>
-  </main>
-
-
-
-
-
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/HuaMinhThien/FrontendMentor-WeatherApp">Hứa Minh Thiện</a>.
-  </div>
-
-  <script type="module" src="dist/main.js">
-    
-  </script>
-</body>
+    <script type="module" src="dist/main.js"></script>
+  </body>
 </html>
