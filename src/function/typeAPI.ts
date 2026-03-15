@@ -45,7 +45,7 @@ export type DailyWeather = {
   weather_code: number[];
   temperature_2m_max: number[];
   temperature_2m_min: number[];
-}
+} 
 
 // type tổng kết hợp tất cả
 export type WeatherResponse = {
