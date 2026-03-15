@@ -210,7 +210,7 @@ main{
 .sec2-daily-box{
     background-color: hsl(243, 23%, 24%);
     border-radius: 10px;
-    width: 100px;
+    width: 120px;
     height: auto;
     display: flex;
     flex-direction: column;
