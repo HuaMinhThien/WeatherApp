@@ -15,7 +15,6 @@
   - [Công nghệ sử dụng](#công-nghệ-sử-dụng)
   - [Những gì mình đã học được](#những-già-mình-đã-học-được)
   - [Phát triển tiếp theo](#phát-triển-tiếp-theo)
-- [Cộng tác với AI](#cộng-tác-với-ai)
 - [Tác giả](#tác-giả)
 
 ## Tổng quan
