@@ -1,10 +1,10 @@
-# Frontend Mentor - Weather app
+# Weather app
 
 ![Design preview for the Weather app coding challenge](./preview.jpg)
 
-# Frontend Mentor - Weather App Solution
+# Weather App Solution
 
-Đây là lời giải của mình cho thử thách [Weather app trên Frontend Mentor](https://www.frontendmentor.io/challenges/weather-app-K1FhddVm49). Dự án giúp mình củng cố kỹ năng lập trình TypeScript và xử lý dữ liệu thực tế từ API.
+I.
 
 ## Mục lục
 
