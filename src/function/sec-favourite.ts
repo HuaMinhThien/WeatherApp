@@ -1,3 +1,9 @@
+import { getWeather } from "./get_API.js";
+import { currentWeather } from "./sec1-today-Weather.js";
+import { dailyWeather } from "./sec2-daily-forecast.js";
+import { hourlyWeather } from "./sec3-hourly-forecast.js";
+import { selectWeekdays } from "./select-weekdays.js";
+
 export const renderFavourite = () => {
     const sectionFavourite = document.querySelector("#sec-favourite") as HTMLElement;
     const getData = localStorage.getItem("favorite-locations");
@@ -21,24 +27,29 @@ export const renderFavourite = () => {
         const deleteButtons = sectionFavourite.querySelectorAll(".btn-delete");
         deleteButtons.forEach((btn) => {
             btn.addEventListener("click", (e) => {
-                e.stopPropagation(); 
-                
-                const indexStr = (e.currentTarget as HTMLElement).getAttribute("data-index");
-                const index = parseInt(indexStr || "0");
-
+                e.stopPropagation();
+                const index = parseInt(btn.getAttribute("data-index") || "0");
                 const currentData = JSON.parse(localStorage.getItem("favorite-locations") || "[]");
                 currentData.splice(index, 1);
                 localStorage.setItem("favorite-locations", JSON.stringify(currentData));
-
                 renderFavourite();
             });
         });
 
         const locationButtons = sectionFavourite.querySelectorAll(".btn-location");
         locationButtons.forEach((btn, index) => {
-            btn.addEventListener("click", () => {
-                const loc = favoriteLocations[index];
-                console.log("Tìm lại địa điểm:", loc.name);
+            btn.addEventListener("click", async () => { 
+                const loc = favoriteLocations[index]; 
+                
+                const res_getWeather = await getWeather(loc.lat, loc.lon);
+                
+                if (res_getWeather) {
+                    currentWeather(loc.name, res_getWeather.current);
+                    dailyWeather(res_getWeather.daily);
+                    hourlyWeather(0, res_getWeather.hourly);
+                    selectWeekdays(res_getWeather.daily);
+                    
+                }
                 
             });
         });
