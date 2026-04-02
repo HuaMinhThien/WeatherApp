@@ -11,6 +11,7 @@ export const currentWeather = (namelocation, dataCurrentWeather) => {
           <div class="sec1-m-left">
             <h3>${namelocation}</h3>
             <p>${weekday}, ${dayMonth}, ${year}</p>
+            <button id="btn-add-favourite" type="button">⭐ Save to favorites </button>
           </div>
           <div class="sec1-m-right">
             <img src="${weatherStatus(dataCurrentWeather.weather_code)}" alt="" />
