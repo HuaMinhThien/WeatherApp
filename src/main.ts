@@ -1,4 +1,6 @@
+import { saveToFavourites } from "./function/addToFavourite.js";
 import { getToaDo, getWeather } from "./function/get_API.js";
+import { renderFavourite } from "./function/sec-favourite.js";
 import { currentWeather } from "./function/sec1-today-Weather.js";
 import { dailyWeather } from "./function/sec2-daily-forecast.js";
 import { hourlyWeather } from "./function/sec3-hourly-forecast.js";
@@ -34,17 +36,25 @@ btnSearch?.addEventListener("click",async function(){
     hourlyWeather(0, res_getWeather.hourly);
     selectWeekdays(res_getWeather.daily);
 
-    const btnSelectDay = document.querySelectorAll(".day") as NodeListOf<HTMLLIElement>;
 
+    const btnSelectDay = document.querySelectorAll(".day") as NodeListOf<HTMLLIElement>;
     btnSelectDay.forEach((li, index) => {
-        li.addEventListener("click",() => {  
-            console.log("da click");
-                
+        li.addEventListener("click",() => {                  
             hourlyWeather(index, res_getWeather_cache!.hourly);
         });
     });
     
+    const btnAddFavourite = document.getElementById("btn-add-favourite") as HTMLButtonElement;
+    btnAddFavourite.addEventListener("click", () => {
+        saveToFavourites(res_location_cache!.name, res_location_cache!.lat, res_location_cache!.lon);
+        renderFavourite();
+    });
+
 });
 
+const btnShowFavourite = document.getElementById("btn-show-favourite") as HTMLButtonElement;
+btnShowFavourite?.addEventListener("click", () => {
+    renderFavourite(); 
+});
 
 

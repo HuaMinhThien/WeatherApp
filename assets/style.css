@@ -24,7 +24,7 @@ header>img{
     height: 35px;
 }
 
-#units{
+#settings{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -33,10 +33,42 @@ header>img{
     padding: 5px 10px;
     background-color: hsl(243, 27%, 20%);
     height: 25px;
+    cursor: pointer;
 }
 
-#units img{
+#settings img{
     height: 15px;
+}
+
+.settings-content {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  background: #242444; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 160px;
+  z-index: 100;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-settings-action {
+  width: 100%;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.btn-settings-action:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #6c63ff;
 }
 
 
@@ -113,12 +145,93 @@ main{
     background-color: hsl(248, 70%, 36%);
 }
 
+.favourite-location{
+    /* max-height: 150px; */
+    height: 70px;
+    max-width: 820px;
+    width: 100%;
+    background-color: hsl(243, 23%, 24%);
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 10px;
+    overflow-x: auto; 
+    white-space: nowrap;
+}
+.favourite-location::-webkit-scrollbar {
+    height: 8px; 
+}
+.favourite-location::-webkit-scrollbar-track {
+    background: transparent; 
+}
+.favourite-location::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.fav-item{
+    height: 40px;  
+    position: relative;  
+    flex-shrink: 0;
+}
+
+.fav-item .btn-location {
+    height: 40px; /* Di chuyển height từ .fav-item xuống đây */
+    border-radius: 5px;
+    background-color: #3e34c0;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0 15px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+.fav-item .btn-location:hover {
+    background-color: #3027a8;
+}
+
+.fav-item .btn-delete {
+    position: absolute; 
+    top: -8px;    
+    right: -8px;  
+    width: 18px;  
+    height: 18px;
+    background-color: #ff4d4d; 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    opacity: 0; 
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+.fav-item:hover .btn-delete {
+    opacity: 1;
+    transform: scale(1.1); 
+}
+
+.fav-item .btn-delete:hover {
+    background-color: #ff1a1a;
+}
+
 .sec1-today-Weather{
     max-width: 840px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 4/5;
     
 }
 
@@ -155,6 +268,9 @@ main{
     color: #ffffff;
     background-color: #7D5FFF;
     cursor: pointer;
+}
+#btn-add-favourite:hover{
+    background-color: #6B4EEB;
 }
 
 .sec1-m-left>h3{
@@ -213,9 +329,9 @@ main{
 .sec2-daily-forecast{
     max-width: 840px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 0px;
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: 5/6;
 }
 .sec2-daily-forecast > h3{
     font-size: 20px;
@@ -255,8 +371,8 @@ main{
 
 .sec3-hourly-forecast{
     background-color: hsl(243, 23%, 24%);
-    
-    grid-row: 3/5;
+    grid-column: 1/2;
+    grid-row: 3/6;
     margin-top: 50px;
     width: 420px;
     border-radius: 10px;
@@ -371,6 +487,14 @@ main{
         justify-self: center;
         
     }
+    .favourite-location{
+        justify-self: center;
+        width: 100%;
+        
+    }
+    .fav-item .btn-delete{
+        opacity: 1;
+    }
     
     .sec1-today-Weather{
         justify-self: center; 
@@ -382,7 +506,8 @@ main{
 
 
     .sec3-hourly-forecast{
-        grid-row: 5/6;
+        grid: 1/2;
+        grid-row: 6/7;
         margin-top: 50px; 
         width: 100%;
         

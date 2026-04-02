@@ -6,7 +6,7 @@ export type Location = {
     lon:string;
 }
 
-// Định nghĩa các đơn vị đo lường (Units)
+// Định nghĩa các đơn vị đo lường 
 export type WeatherUnits = {
   time: string;
   interval?: string;

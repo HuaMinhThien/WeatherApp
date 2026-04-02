@@ -28,11 +28,19 @@
     <header>
       <img src="assets/images/logo.svg" alt="" />
 
-      <div id="units">
-        <img src="assets/images/icon-units.svg" alt="" />
-        <p>Units</p>
-        <img src="assets/images/icon-dropdown.svg" alt="" />
-      </div>
+      <details class="settings-dropdown">
+        <summary class="settings-summary" id="settings">
+          <img src="assets/images/icon-units.svg" alt="" />
+          <p>Settings</p>
+          <img src="assets/images/icon-dropdown.svg" alt="" style="height: 10px" />
+        </summary>
+        
+        <div class="settings-content">
+          <button id="btn-show-favourite" type="button" class="btn-settings-action">
+            ⭐ Show Favourite
+          </button>
+        </div>
+      </details>
     </header>
 
     <main>
@@ -45,6 +53,10 @@
         </div>
 
         <button id="btn-search" >Search</button>
+      </section>
+
+      <section id="sec-favourite">
+        
       </section>
 
       <section class="sec1-today-Weather">
