@@ -497,8 +497,25 @@ main{
     }
     
     .sec1-today-Weather{
+        margin-top: 20px;
         justify-self: center; 
     }   
+
+    .sec1-m-left>h3{
+        font-weight: 600;
+        font-size: 25px;
+        
+    }
+    .sec1-m-left>p{
+        font-size: 15px;
+    }
+
+    .sec1-m-right{   
+        font-size: 40px;
+    }
+    .sec1-m-right img{
+        height: 70px;
+    }
 
     .sec2-daily-box{       
         width: 100px;
