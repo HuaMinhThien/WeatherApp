@@ -517,6 +517,10 @@ main{
         height: 70px;
     }
 
+    .sec2-daily-forecast{
+        margin-top: 20px;
+        justify-self: center; 
+    }
     .sec2-daily-box{       
         width: 100px;
     }
@@ -532,11 +536,27 @@ main{
 }
 
 @media (max-width: 767px) {
+    #title{
+        font-size: 30px;
+    }
+
     .sec1-param-box{
         max-width: 198px;
         
     }
+
+    .title-param{
+        font-size: 14px;
+        margin-left: 20px;
+
+    }
+    .current-param{
+        font-size: 16px;
+        margin-left: 20px;
+    }
     .sec2-daily-box{       
         width: 94px;
     }
+
+    
 }
