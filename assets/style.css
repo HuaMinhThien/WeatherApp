@@ -14,10 +14,11 @@ header{
     justify-content: space-between;
     align-items: center;
 
-    justify-self: center;
-    margin-top: 20px;
+    justify-self: center;   
+    margin-top: 0px;
+    padding: 20px 0;
     width: 1300px;
-    position: relative;
+    position: fixed;
     background-color: hsl(243, 96%, 9%);
 }
 header>img{
@@ -75,12 +76,13 @@ header>img{
 main{
     width: 1300px;
     justify-self: center;
-    margin: 50px 0px;
+    margin: 0px 0px;
     display: grid;
     gap: 10px;
 }
 
 #title{
+    margin-top: 70px;
     grid-column: 1/3;
     grid-row: 1/2;
     font-size: 55px;
@@ -471,7 +473,6 @@ main{
     header{
         width: 90%;
         margin: auto;
-        margin-top: 20px;
     }
     main {
         width: 90%;
