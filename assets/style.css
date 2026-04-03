@@ -306,7 +306,7 @@ main{
 
 .sec1-param-box{
     max-width: 185px;
-    width: 30vh;
+    width: 100%;
     height: 100px;
     background-color: hsl(243, 23%, 24%);
     border-radius: 10px;
@@ -515,6 +515,10 @@ main{
     }
     .sec1-m-right img{
         height: 70px;
+    }
+    .sec1-param-box{
+        max-width: 40vw;
+        width: 100%;
     }
 
     .sec2-daily-forecast{
