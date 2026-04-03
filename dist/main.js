@@ -42,4 +42,15 @@ const btnShowFavourite = document.getElementById("btn-show-favourite");
 btnShowFavourite?.addEventListener("click", () => {
     renderFavourite();
 });
+document.addEventListener("click", (e) => {
+    const target = e.target;
+    const settings = document.querySelector(".settings-dropdown");
+    if (settings && !settings.contains(target)) {
+        settings.open = false;
+    }
+    const dropDay = document.querySelector(".drop-day");
+    if (dropDay && !dropDay.contains(target)) {
+        dropDay.open = false;
+    }
+});
 //# sourceMappingURL=main.js.map

@@ -58,3 +58,16 @@ btnShowFavourite?.addEventListener("click", () => {
 });
 
 
+document.addEventListener("click", (e) => {
+    const target = e.target as Node;
+
+    const settings = document.querySelector(".settings-dropdown") as HTMLDetailsElement;
+    if (settings && !settings.contains(target)) {
+        settings.open = false;
+    }
+
+    const dropDay = document.querySelector(".drop-day") as HTMLDetailsElement;
+    if (dropDay && !dropDay.contains(target)) {
+        dropDay.open = false;
+    }
+});
