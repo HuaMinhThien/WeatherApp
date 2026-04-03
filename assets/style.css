@@ -19,7 +19,7 @@ header{
     padding: 20px 0;
     width: 1300px;
     position: fixed;
-    background-color: hsl(243, 96%, 9%);
+    background-color: hsla(243, 96%, 9%, 0.905);
 }
 header>img{
     height: 35px;
