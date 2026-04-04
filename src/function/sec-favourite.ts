@@ -50,6 +50,13 @@ export const renderFavourite = () => {
                     selectWeekdays(res_getWeather.daily);
                     
                 }
+
+                const btnSelectDay = document.querySelectorAll(".day") as NodeListOf<HTMLLIElement>;
+                btnSelectDay.forEach((li, index) => {
+                    li.addEventListener("click",() => {                  
+                        hourlyWeather(index, res_getWeather!.hourly);
+                    });
+                });
                 
             });
         });

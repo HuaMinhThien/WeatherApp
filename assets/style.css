@@ -19,6 +19,7 @@ header{
     padding: 20px 0;
     width: 1300px;
     position: fixed;
+    z-index: 100;
     background-color: hsla(243, 96%, 9%, 0.905);
 }
 header>img{

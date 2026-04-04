@@ -41,6 +41,12 @@ export const renderFavourite = () => {
                     hourlyWeather(0, res_getWeather.hourly);
                     selectWeekdays(res_getWeather.daily);
                 }
+                const btnSelectDay = document.querySelectorAll(".day");
+                btnSelectDay.forEach((li, index) => {
+                    li.addEventListener("click", () => {
+                        hourlyWeather(index, res_getWeather.hourly);
+                    });
+                });
             });
         });
     }
