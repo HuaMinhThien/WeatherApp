@@ -3,6 +3,7 @@ import { currentWeather } from "./sec1-today-Weather.js";
 import { dailyWeather } from "./sec2-daily-forecast.js";
 import { hourlyWeather } from "./sec3-hourly-forecast.js";
 import { selectWeekdays } from "./select-weekdays.js";
+import type { WeatherResponse } from "./typeAPI.js";
 
 export const renderFavourite = () => {
     const sectionFavourite = document.querySelector("#sec-favourite") as HTMLElement;
@@ -36,6 +37,7 @@ export const renderFavourite = () => {
             });
         });
 
+        let res_getWeather_cache: WeatherResponse | null = null;
         const locationButtons = sectionFavourite.querySelectorAll(".btn-location");
         locationButtons.forEach((btn, index) => {
             btn.addEventListener("click", async () => { 
@@ -48,16 +50,16 @@ export const renderFavourite = () => {
                     dailyWeather(res_getWeather.daily);
                     hourlyWeather(0, res_getWeather.hourly);
                     selectWeekdays(res_getWeather.daily);
-                    
+                    res_getWeather_cache = res_getWeather;
                 }
-
-                const btnSelectDay = document.querySelectorAll(".day") as NodeListOf<HTMLLIElement>;
-                btnSelectDay.forEach((li, index) => {
-                    li.addEventListener("click",() => {                  
-                        hourlyWeather(index, res_getWeather!.hourly);
-                    });
-                });
                 
+            });
+        });
+
+        const btnSelectDay = document.querySelectorAll(".day") as NodeListOf<HTMLLIElement>;
+        btnSelectDay.forEach((li, index) => {
+            li.addEventListener("click",() => {                  
+                hourlyWeather(index, res_getWeather_cache!.hourly);
             });
         });
     }
